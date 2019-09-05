@@ -1,6 +1,8 @@
 package com.fqedu.examsys.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -8,6 +10,7 @@ import java.util.Date;
 public class TPaper {
 
     private Integer id;
+    private String paperName;
 
     private Integer sortId;
 
@@ -25,7 +28,10 @@ public class TPaper {
 
     private Integer decideScore;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+
     private Date starTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 
     private Date endTime;
 

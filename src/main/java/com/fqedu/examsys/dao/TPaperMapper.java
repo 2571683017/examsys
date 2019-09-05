@@ -1,17 +1,28 @@
 package com.fqedu.examsys.dao;
 
-import com.angus.entity.TPaper;
+
+import com.fqedu.examsys.entity.TPaper;
+import com.fqedu.examsys.utils.TPaper2;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
+import java.util.List;
 
 public interface TPaperMapper {
-    int deleteByPrimaryKey(Integer id);
 
-    int insert(TPaper record);
+    public List<TPaper2> findAllTPaper();
 
-    int insertSelective(TPaper record);
+    public void addTPaper(TPaper tPaper);
 
-    TPaper selectByPrimaryKey(Integer id);
+    public void deleteById(Integer id);
 
-    int updateByPrimaryKeySelective(TPaper record);
+    public  TPaper2 findOneById(Integer id);
 
-    int updateByPrimaryKey(TPaper record);
+    public void updateInfo(TPaper tPaper);
+
+
+
+
+
+
 }

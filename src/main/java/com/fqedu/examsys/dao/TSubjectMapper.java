@@ -1,17 +1,11 @@
 package com.fqedu.examsys.dao;
 
-import com.angus.entity.TSubject;
+
+import com.fqedu.examsys.entity.TSort;
+import com.fqedu.examsys.entity.TSubject;
+
+import java.util.List;
 
 public interface TSubjectMapper {
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(TSubject record);
-
-    int insertSelective(TSubject record);
-
-    TSubject selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(TSubject record);
-
-    int updateByPrimaryKey(TSubject record);
+    public List<TSubject> findAllTSubject();
 }
